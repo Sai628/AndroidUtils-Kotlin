@@ -41,6 +41,7 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions.kotlin}"
+    implementation "com.android.support:support-annotations:${versions.supportLibrary}"
     implementation "com.android.support:support-compat:${versions.supportLibrary}"
 
     testImplementation 'junit:junit:4.12'

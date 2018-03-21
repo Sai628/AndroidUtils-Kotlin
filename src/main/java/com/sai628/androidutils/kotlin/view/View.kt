@@ -39,7 +39,8 @@ inline fun View.doOnNextLayout(crossinline action: (view: View) -> Unit) {
                 oldLeft: Int,
                 oldTop: Int,
                 oldRight: Int,
-                oldBottom: Int) {
+                oldBottom: Int
+        ) {
             v.removeOnLayoutChangeListener(this)
             action(v)
         }
@@ -83,7 +84,8 @@ inline fun View.updatePaddingRelative(
         @Px start: Int = paddingStart,
         @Px top: Int = paddingTop,
         @Px end: Int = paddingEnd,
-        @Px bottom: Int = paddingBottom) {
+        @Px bottom: Int = paddingBottom
+) {
     setPaddingRelative(start, top, end, bottom)
 }
 
@@ -92,7 +94,8 @@ inline fun View.updatePadding(
         @Px left: Int = paddingLeft,
         @Px top: Int = paddingTop,
         @Px right: Int = paddingRight,
-        @Px bottom: Int = paddingBottom) {
+        @Px bottom: Int = paddingBottom
+) {
     setPadding(left, top, right, bottom)
 }
 

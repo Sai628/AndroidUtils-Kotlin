@@ -157,5 +157,3 @@ inline var View.isGone: Boolean
     set(value) {
         visibility = if (value) View.GONE else View.VISIBLE
     }
-
-

@@ -26,6 +26,7 @@ import android.support.v4.view.ViewCompat
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import com.sai628.androidutils.kotlin.graphics.applyCanvas
 
 
 inline fun View.doOnNextLayout(crossinline action: (view: View) -> Unit) {
@@ -134,7 +135,10 @@ fun View.toBitmap(config: Bitmap.Config = Bitmap.Config.ARGB_8888): Bitmap {
         throw IllegalStateException("View needs to be laid out before calling toBitmap()")
     }
 
-    TODO("applyCanvas not implement yet")
+    return Bitmap.createBitmap(width, height, config).applyCanvas {
+        translate(-scrollX.toFloat(), -scrollY.toFloat())
+        draw(this)
+    }
 }
 
 
